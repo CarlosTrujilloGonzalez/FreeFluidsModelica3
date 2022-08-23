@@ -1,4 +1,4 @@
-# FreeFluidsModelica
+# FreeFluidsModelica3
 Modelica package for chemical engineering. It includes media definitions compatible with Modelica.Media.
 There are several media definitions, with different capabilities. The TMedia package is fast and intended mainly for liquid applications.
 The ExternalMedia package implements, using external object and functions, several equations of state. Including Multiparameter, PCSAFT and different cubic flavours.
