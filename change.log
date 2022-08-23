@@ -1,0 +1,67 @@
+Version 2.3.1
+- Pressure correction has been added to the viscosity and thermal conductivity calculationin gas phase.
+- A new package, called LMedia, derived from TMedia and limited to liquid phase calculation has been added.
+
+Version 2.3.0
+- TMedia package can work now over the critical temperature
+- Improvement in gas density, enthalpy, and entropy calculation
+- Bug correction in setState_psX function
+
+Version 2.2.1
+- Just a change in packages layout
+
+Version 2.2.0
+- Addition of packages for fluid flow.
+
+Version 2.1.0
+- Redefinition of the BaseProperties model
+- Addition of derivative functions needed for the BaseProperties model operation
+- Compatible with Modelica.Fluid
+
+Version 2.0.0
+- Indepth review and improvement of the Modelica code, and of the C code used in ExternalMedia. Many bug corrections also.
+- Addition of Extended Corresponding States capability for viscosity and thermal conductivity calculation, using NIST polynomia when available.
+- Change in the format of the structures used in ExternalMedia for substance description. The old exported structures are not compatible.
+- Enlargement of the database of substances.
+- The database, in MSAcces and SQLite formats, has been added to the Resources folder.
+- As FreeFluidsGui project has not yet been updated, an updated Windows executable is included in the Resources folder,
+in order to allow the export of substances in the formats used in the Modelica part.
+ 
+Version 1.2.0
+- Added package ExternalMedia for two phases single substance. Based in equations of state.
+
+Version 1.1.6
+- The BaseProperties model has been changed from equations to algorithms.
+- Improved gas density and enthalpy calculation.
+- Improved density and enthalpy derivatives calculation. 
+- n-Hexane and n-Heptane added to the Fluids datadabase.
+
+Version 1.1.5
+- All media packages use now pure Modelica functions and are compatible with the new frotend of OpenModelica.
+- The package TMedia has been extended to manage also the gas phase, with density and enthalpy calculation improved over ideal gas.
+- The package TMedia continues being limited to work below the critical temperature.
+
+Version 1.1.4
+- Added pure Modelica functions for the calculation of physical properties by correlations, including enthalpy and entropy.
+- Substitution, in the TMedium package, of the physical properties calculation using external function by a pure Modelica function calculation.
+The change is not yet done for enthalpy and entropy calculation.
+- Correction of some bugs in the physical properties calculation routines.
+- Changed the variable name from Pc to criticalPressure in the fluids data record, in order to gain compatibility with ThermoPower.
+- Addition of derivative functions calculation to the TMedium package. The package is now compatible with ThermoPower package.
+
+Version 1.1.3
+- Changed the inputChoice constant of the TMedium package from enumeration to string. It was impossible to modify the original selection.
+- Changed the assertion level to warning if trying to use the saturationTemperature function, of the TMedium package, over the critical pressure. It was producing problems when working over the Pc.
+
+Version 1.1.2
+- .gitattributes file added in order to obtain correct classification of the used language.
+
+Version 1.1.0
+- The MediaData record in the MediaCommon package has been updated.
+- MediaData records for more substances. Now in two files: MediaDataAL.mo and MediaDataMZ.mo, in order to better edit a high number of substances.
+- The TMedia package now uses the standard way, defined in Modelica.Media.PartialTwoPhaseMedium, for substance data storage: the FluidConstants fluidConstants[] record.
+- The TMedia can now use different enthalpy/entropy references: "IIR", "NBE", "ASHRAE" or  user defined.
+- Pressure corrections (applicable or not, depending on the value of the constant Boolean highPressure) added for: 
+	liquid enthalpy, entropy, heat capacity, viscosity and thermal conductivity.
+- Correction of the inverse function solver in order not to produce errors by the calculation at the critical point.
+
