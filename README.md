@@ -4,5 +4,6 @@ There are several media definitions, with different capabilities. The TMedia pac
 The ExternalMedia package implements, using external object and functions, several equations of state. Including Multiparameter, PCSAFT and different cubic flavours.
 The packages implement also the calculation of transport properties.
 It also includes steady state fluid flow models with pipes, valves and pumps. 
+Compatible with MSL 3.2.3
 # License
 FreeFluids is open-source software licensed under GPL version 3.
